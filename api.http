@@ -1,0 +1,28 @@
+@base_url = http://localhost:8000
+
+### Health Check
+GET {{base_url}}
+
+### Get all users
+GET {{base_url}}/api/users
+
+### Create a new user
+POST {{base_url}}/api/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "johndoe@example.com"
+}
+
+### Get a single user
+PUT {{base_url}}/api/users/1
+Content-Type: application/json
+
+{
+    "name": "Updated Name",
+    "email": "updatedemail@example.com"
+}
+
+### Delete a user
+DELETE {{base_url}}/api/users/1
